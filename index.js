@@ -20,7 +20,7 @@ async function fetchWeatherForecast() {
         const data = await response.json();
 
         console.log("Järgmiste tundide ilmaennustus:");
-        for (let i = 1; i < 4; i++) {
+        for (let i = 0; i < 3; i++) {
             const forecast = data.properties.timeseries[i];
             const time = new Date(forecast.time).toLocaleString();
             const temperature = forecast.data.instant.details.air_temperature + "°C";
